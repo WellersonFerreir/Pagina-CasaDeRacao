@@ -1,6 +1,16 @@
+:root {
+    --laranja: #F9734A;
+    --azul: #4F50BF;
+    --branco: #f5f5f5;
+}
+
 /* PAGINA INICIAL */
 .cabecalho__logo {
-    background-color: #F9734A;
+    background-color: var(--laranja);
+}
+
+.cabecalho__logo {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
 }
 
 .cabecalho__logo img {
@@ -13,7 +23,7 @@
     text-align: center;
     font-family: 'Itim', cursive;
     font-size: 1.7rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 1.3rem;
 }
 
@@ -22,17 +32,29 @@
     justify-content: center;
 }
 
+.escolha img {
+    height: 20rem;
+}
+
 .escolha-1 img,
-button {
+a {
     border-radius: 15px 0 0 15px;
 }
 
 .escolha-2 img,
-button {
+a {
     border-radius: 0 15px 15px 0;
 }
 
-button {
+.escolha-1 img{
+    box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.escolha-2 img{
+    box-shadow: 8px 8px 15px 0px  rgba(0, 0, 0, 0.5);
+}
+
+a {
     cursor: pointer;
     border: none;
     position: relative;
@@ -41,23 +63,31 @@ button {
 
 /* SOBREPOSIÇÃO */
 
-.sobreposicao-botao-1{
+.escolha a {
+    position: relative;
+}
+
+.sobreposicao-botao-1,
+.sobreposicao-botao-2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--branco);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    height: 99%;
+    opacity: 0;
+    transition: opacity 0.8s;
     border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
-.sobreposicao-botao-1:hover{
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.sobreposicao-txt{
-    display: flex;
-    margin-left: 45%;
-    margin-top: 45%;
+.escolha a:hover .sobreposicao-botao-1,
+.escolha a:hover .sobreposicao-botao-2 {
+    opacity: 1;
 }
