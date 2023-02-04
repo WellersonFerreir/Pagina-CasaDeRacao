@@ -19,6 +19,10 @@
     border-radius: 15px;
 }
 
+.titulo a{
+    font-family: 'Itim', cursive;
+}
+
 .cabecalho__titulo {
     text-align: center;
     font-family: 'Itim', cursive;
