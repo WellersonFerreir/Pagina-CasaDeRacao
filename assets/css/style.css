@@ -2,6 +2,15 @@
     --laranja: #F9734A;
     --azul: #4F50BF;
     --branco: #f5f5f5;
+    --itim: 'Itim', cursive;
+    --roboto: 'Roboto', sans-serif;
+    --cinza: #999999;
+    --verde: #4CAF50;
+    --verde-escuro: #317434;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* PAGINA INICIAL */
