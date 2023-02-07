@@ -1,39 +1,35 @@
+a{
+    background-color: transparent;
+    color: inherit;
+}
+
 .cabecalho__logo {
     margin-bottom: 3rem;
 }
 
 .titulo {
     font-family: var(--itim);
-    margin-left: 11.8rem;
+    margin-left: 16.5rem;
+}
+
+.escolha-1-nav a, span{
+    color: var(--azul);
+    font-weight: 700;
 }
 
 .nav {
-    margin-left: 11.8rem;
+    margin-left: 16.5rem;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
 }
 
-input[type="text"] {
+.divSearch input {
     padding: 6px;
     font-size: 16px;
     border: 1px solid var(--cinza);
     border-radius: 5px;
     width: 50%;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 6px;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: var(--verde);
-    color: var(--branco);
-    cursor: pointer;
-    border: 1px solid var(--cinza);
-}
-
-button:hover {
-    background-color: var(--verde-escuro);
+    margin-top: 3rem;
 }
 
 .lista__item__1 {
@@ -58,9 +54,12 @@ button:hover {
     border-style: solid;
     border-width: 1px;
     border-color: var(--cinza);
-    padding: 0 1.3rem 2rem 1.3rem;
-    margin-bottom: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 0;
     border-radius: 10px;
+    background-color: transparent;
+    color: var(--azul);
 }
 
 .loja__conteiner {
@@ -69,7 +68,7 @@ button:hover {
 }
 
 .loja__lista__1 {
-    width: 80%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -77,13 +76,13 @@ button:hover {
 .lista__nome {
     width: 100%;
     color: var(--cinza);
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 0.2rem;
 }
 
 .lista__txt {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 1.8rem;
 }
 
@@ -95,6 +94,9 @@ button:hover {
 .lista__preco {
     color: var(--azul);
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 100%;
 }
+
+
+
