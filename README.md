@@ -20,3 +20,5 @@ Se você gostaria de contribuir para este projeto, por favor, envie um pull requ
 - [SwiperJS] (https://swiperjs.com/)
 
 <img src="./assets/readme/ezgif.com-optimize.gif" alt="gif aprensentação">
+
+Obs: Logo tera a versão responsiva da pagina de compra.
