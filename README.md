@@ -18,3 +18,5 @@ Se você gostaria de contribuir para este projeto, por favor, envie um pull requ
 ## Referências
 - [Google Fonts](https://fonts.google.com/)
 - [SwiperJS] (https://swiperjs.com/)
+
+<img src="./assets/readme/ezgif.com-optimize.gif" alt="gif aprensentação">
