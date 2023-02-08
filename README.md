@@ -6,6 +6,11 @@ cada uma com um link que direciona o usuário para uma segunda página com mais 
 <p>1. Clone este repositório. <br>
 2. Abra o arquivo `index.html` em um navegador web.</p>
 
+<h2>Tecnologias usadas</h2>
+<p>- HTML<br>
+- CSS<br>
+- JavaScript</p>
+
 <h2>Referências</h2>
 <p>- [Google Fonts](https://fonts.google.com/)<br>
 - [SwiperJS] (https://swiperjs.com/)</p>
