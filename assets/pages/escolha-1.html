@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css-escolha-1/reset.css">
-  <link rel="stylesheet" href="./css-escolha-1/style.css">
+  <link rel="stylesheet" href="../css/compra-style.css">
+  <link rel="stylesheet" href="../css/loja-style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto&display=swap" rel="stylesheet">
@@ -18,15 +20,18 @@
 <body>
   <header>
     <div class="cabecalho__logo">
-      <img src="./img-esolha-1/logo-cabecalho.svg" alt="logotipo da loja">
+      <img src="../../assets/img/logo-cabecalho.svg" alt="logotipo da loja">
     </div>
     <div>
       <h1 class="titulo">Ração para cachorro</h1>
     </div>
     <div>
       <nav class="nav">
-        <a href="">Inicio</a>
+        <a href="../../index.html">Inicio</a>
         <span>/ Ração para cachorro</span>
+        <div class="divSearch">
+          <input type="text" id="searchInput" placeholder="Pesquisar...">
+        </div>
       </nav>
     </div>
   </header>
@@ -36,9 +41,10 @@
 
       <div class="loja__conteiner">
 
-        <ul class="loja__lista__1">
+        <ul class="loja__lista__1" id="list">
           <li class="lista__item__1">
-            <a href="#" id="HTML"><img src="./img-esolha-1/racao-1.svg" alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-adulto.html" id="HTML"><img src="./img-escolha-1/racao-1.svg"
+                alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para cachorro <br>porte X, adulto</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -46,15 +52,17 @@
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="#" id="HTML"><img src="./img-esolha-1/racao-2.svg" alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-natural.html" id="HTML"><img src="./img-escolha-1/racao-2.svg"
+                alt="ração marca x">
               <span class="lista__nome">Marca x</span>
-              <p class="lista__txt">Ração sabor X, para cachorro <br>porte X, adulto</p>
+              <p class="lista__txt">Ração sabor X, para cachorro <br>porte X, natural</p>
               <span class="lista__preco__txt">A partir de</span>
               <span class="lista__preco">R$ 4,50</span>
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="#" id="HTML"><img src="./img-esolha-1/racao-3.svg" alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-senior.html" id="HTML"><img src="./img-escolha-1/racao-3.svg"
+                alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para cachorro <br>porte X, Senior</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -62,7 +70,8 @@
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="#" id="HTML"><img src="./img-esolha-1/racao-4.svg" alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-castrado.html" id="HTML"><img src="./img-escolha-1/racao-4.svg"
+                alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para cachorro <br>porte X, Cachorro Castrado</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -70,7 +79,8 @@
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="#" id="HTML"><img src="./img-esolha-1/racao-5.svg" alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-obeso.html" id="HTML"><img src="./img-escolha-1/racao-5.svg"
+                alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para cachorro <br>porte X, Cachorro Obeso</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -78,7 +88,8 @@
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="#" id="HTML"><img src="./img-esolha-1/racao-6.svg" alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-filhote.html" id="HTML"><img src="./img-escolha-1/racao-6.svg"
+                alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para cachorro porte X, Cachorro filhote</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -88,6 +99,7 @@
         </ul>
       </div>
     </main>
+    <script src="./js/escolha.js"></script>
   </body>
 
 </html>

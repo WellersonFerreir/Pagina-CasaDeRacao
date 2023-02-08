@@ -1,3 +1,15 @@
+:root {
+    --laranja: #F9734A;
+    --azul: #4F50BF;
+    --branco: #f5f5f5;
+    --itim: 'Itim', cursive;
+    --roboto: 'Roboto', sans-serif;
+    --cinza: #999999;
+    --verde: #4CAF50;
+    --verde-escuro: #317434;
+    --preto: #1d1d1d;
+}
+
 a{
     background-color: transparent;
     color: inherit;
@@ -23,10 +35,12 @@ a{
     margin-top: 0.5rem;
 }
 
+
+
 .divSearch input {
     padding: 6px;
     font-size: 16px;
-    border: 1px solid var(--cinza);
+    border: 1px solid var(--preto);
     border-radius: 5px;
     width: 50%;
     margin-top: 3rem;
