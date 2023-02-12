@@ -15,7 +15,7 @@ cada uma com um link que direciona o usuário para uma segunda página com mais 
 <p>- [Google Fonts](https://fonts.google.com/)<br>
 - [SwiperJS] (https://swiperjs.com/)</p>
 
-<h3>Video de apresentação do projeto:</h3>
+<h3>GIF de apresentação do projeto:</h3>
 <img src="./assets/readme/ezgif.com-optimize.gif" alt="gif aprensentação">
 
 <p>Obs: Logo tera a versão responsiva da pagina de compra.</p>
