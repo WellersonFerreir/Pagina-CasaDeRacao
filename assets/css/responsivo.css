@@ -59,10 +59,6 @@
     }
 }
 
-/* ----------------------------------------------- */
-
-
-
 @media only screen and (min-width: 350px) and (max-width: 749px) {
 
     .titulo {
@@ -181,7 +177,7 @@
     }
 
     .divSearch input{
-        width: 50%;
+        width: 100%;
     }
 
     .lista__item__1{
