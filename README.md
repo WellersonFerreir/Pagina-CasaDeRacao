@@ -1,4 +1,4 @@
-<h1>EM CONSTRUÇÃO...</h1>
+<h1>EM RECONSTRUÇÃO...</h1>
 
 <h2>Loja de Ração</h2>
 <p>Este projeto é uma loja virtual de ração para animais. A página inicial contém duas seções, uma para ração de cachorro e outra para ração de gato, 
