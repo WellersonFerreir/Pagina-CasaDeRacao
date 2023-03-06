@@ -1,5 +1,6 @@
 :root {
     --laranja: #F9734A;
+    --laranja-claro: #fd9373;
     --azul: #4F50BF;
     --branco: #f5f5f5;
     --itim: 'Itim', cursive;
@@ -13,7 +14,7 @@
 header {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     align-items: center;
@@ -22,9 +23,10 @@ header {
     background-color: var(--laranja);
 }
 
-.loja{
+.loja {
     margin-top: 18rem;
 }
+
 /* PAGINA INICIAL */
 
 .cabecalho__logo {
@@ -92,9 +94,46 @@ a {
 
 .auth-buttons:nth-child(3) {
     grid-column: 3;
-    width: 100%;
-    height: 100%;
+    width: 30%;
+    height: 36%;
+    margin: 0rem 0rem 0rem 7rem;
+}
+
+.auth-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "material-symbols-outlined btn-enter"
+    ". btn-register";
+    border-radius: 5px;
+    border: 5px;
+    border-color: var(--cinza);
+    font-weight: 700;
+    background-color: var(--laranja-claro);
+}
+
+.material-symbols-outlined {
+    grid-area: material-symbols-outlined;
     justify-self: center;
+}
+
+.btn-enter:hover,
+.btn-register:hover {
+    cursor: pointer;
+    background-color: var(--verde-escuro);
+}
+
+.btn-enter {
+    grid-area: btn-enter;
+    justify-self: center;
+}
+
+.btn-register {
+    grid-area: btn-register;
+  justify-self: center;
+    font-weight: 400;
+    font-family: var(--roboto);
 }
 
 a {
