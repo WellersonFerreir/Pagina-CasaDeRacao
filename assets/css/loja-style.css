@@ -1,14 +1,16 @@
 :root {
     --laranja: #F9734A;
     --laranja-claro: #fd9373;
-    --azul: #4F50BF;
+    --azul: #3437d8;
+    --azul-escuro: #0003c4;
     --branco: #f5f5f5;
-    --itim: 'Itim', cursive;
-    --roboto: 'Roboto', sans-serif;
     --cinza: #999999;
     --verde: #4CAF50;
     --verde-escuro: #317434;
-    --preto: #1d1d1d;
+    --preto: #000000;
+    --preto-claro: #313131;
+    --itim: 'Itim', cursive;
+    --roboto: 'Roboto', sans-serif;
 }
 
 header {
@@ -87,6 +89,20 @@ a {
     position: relative;
     display: inline-block;
 }
+.auth-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "material-symbols-outlined btn-enter"
+        "btn-register btn-register";
+    grid-row-gap: 10px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 5px;
+    border-color: var(--cinza);
+    background-color: var(--laranja-claro);
+}
 
 .divSearch:nth-child(2) {
     grid-column: 2;
@@ -94,46 +110,54 @@ a {
 
 .auth-buttons:nth-child(3) {
     grid-column: 3;
-    width: 30%;
-    height: 36%;
-    margin: 0rem 0rem 0rem 7rem;
-}
-
-.auth-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "material-symbols-outlined btn-enter"
-    ". btn-register";
-    border-radius: 5px;
-    border: 5px;
-    border-color: var(--cinza);
-    font-weight: 700;
-    background-color: var(--laranja-claro);
-}
-
-.material-symbols-outlined {
-    grid-area: material-symbols-outlined;
+    width: 7rem;
+    height: 2rem;
     justify-self: center;
 }
 
-.btn-enter:hover,
-.btn-register:hover {
-    cursor: pointer;
-    background-color: var(--verde-escuro);
+
+#material-symbols-outlined {
+    color: var(--preto-claro);
+    grid-area: material-symbols-outlined;
+    justify-self: center;
+    align-self: self-end;
+    font-size: 2rem;
+}
+
+.btn-enter:hover{
+    color: var(--preto);
 }
 
 .btn-enter {
     grid-area: btn-enter;
+    align-self: center;
     justify-self: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--preto-claro);
 }
 
 .btn-register {
+    margin-top: 0.1rem;
+    display: flex;
+    flex-direction: column;
     grid-area: btn-register;
-  justify-self: center;
+    color: var(--preto);
+    justify-self: center;
+    font-size: 0.8rem;
     font-weight: 400;
+    font-family: var(--itim);
     font-family: var(--roboto);
+}
+
+.btn-register a:hover {
+    cursor: pointer;
+    color: var(--azul-escuro);
+}
+.btn-register a {
+    align-self: center;
+    color: var(--azul);
+    font-weight: 700;
 }
 
 a {
@@ -166,9 +190,9 @@ span {
 }
 
 .divSearch input {
-    padding: 6px;
+    padding: 1rem;
     font-size: 16px;
-    border: 1px solid var(--preto);
+    border: 1px solid var(--cinza);
     border-radius: 5px;
     margin-top: 3rem;
 }
