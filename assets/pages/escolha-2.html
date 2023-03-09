@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/compra-style.css">
   <link rel="stylesheet" href="../css/loja-style.css">
-  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/responsivo.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto&display=swap" rel="stylesheet">
@@ -16,34 +17,40 @@
   <title>Loja de Ração</title>
 </head>
 
-
 <body>
   <header>
     <div class="cabecalho__logo">
-      <img src="../img/logo-cabecalho.svg" alt="logotipo da loja">
+      <img src="../../assets/img/logo-cabecalho.svg" alt="logotipo da loja">
     </div>
-    <div>
-      <h1 class="titulo">Ração para cachorro</h1>
+    <div class="divSearch">
+      <input type="text" id="searchInput" placeholder="Pesquisar...">
     </div>
-    <div>
-      <nav class="nav">
-        <a href="../../index.html">Inicio</a>
-        <span>/ Ração para cachorro</span>
-        <div class="divSearch">
-          <input type="text" id="searchInput" placeholder="Pesquisar...">
-        </div>
-      </nav>
+    <div class="auth-buttons">
+      <span class="material-symbols-outlined" id="material-symbols-outlined">person</span>
+      <a href="#" class="btn-enter btn-grid">Entrar</a>
+      <span class=" btn-register btn-grid">Não tem cadastro?<br><a href="#">Cadastrar-se</a>
+      </a></span>
     </div>
   </header>
 
-  <body>
-    <main class="loja">
+  <main>
+    <div class="loja">
+      <div>
+        <h1 class="titulo">Ração para cachorro</h1>
+      </div>
+      <div>
+        <nav class="nav">
+          <a href="../../index.html">Inicio</a>
+          <span>/ Ração para gato</span>
+        </nav>
+      </div>
 
       <div class="loja__conteiner">
 
         <ul class="loja__lista__1" id="list">
           <li class="lista__item__1">
-            <a href="./compra-escolha-2/compra-adulto.html" id="HTML"><img src="./img-escolha-2/racao-gato-1.svg" alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-adulto.html" id="HTML" class="img-conteiner"><img
+                src="./img-escolha-2/racao-gato-1.svg" alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para gato <br>porte X, adulto</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -51,8 +58,8 @@
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="./compra-escolha-2/compra-natural.html" id="HTML"><img src="./img-escolha-2/racao-gato-2.svg"
-                alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-natural.html" id="HTML" class="img-conteiner"><img
+                src="./img-escolha-2/racao-gato-2.svg" alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para gato <br>porte X, natural</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -60,8 +67,8 @@
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="./compra-escolha-2/compra-senior.html" id="HTML"><img src="./img-escolha-2/racao-gato-3.svg"
-                alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-senior.html" id="HTML" class="img-conteiner"><img
+                src="./img-escolha-2/racao-gato-3.svg" alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para gato <br>porte X, Senior</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -69,8 +76,8 @@
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="./compra-escolha-2/compra-castrado.html" id="HTML"><img src="./img-escolha-2/racao-gato-4.svg"
-                alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-castrado.html" id="HTML" class="img-conteiner"><img
+                src="./img-escolha-2/racao-gato-4.svg" alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para gato <br>porte X, gato Castrado</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -78,8 +85,8 @@
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="./compra-escolha-2/compra-obeso.html" id="HTML"><img src="./img-escolha-2/racao-gato-5.svg"
-                alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-obeso.html" id="HTML" class="img-conteiner"><img
+                src="./img-escolha-2/racao-gato-5.svg" alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para gato <br>porte X, gato Obeso</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -87,8 +94,8 @@
             </a>
           </li>
           <li class="lista__item__1">
-            <a href="./compra-escolha-2/compra-filhote.html" id="HTML"><img src="./img-escolha-2/racao-gato-6.svg"
-                alt="ração marca x">
+            <a href="../pages/compra-escolha-1/compra-filhote.html" id="HTML" class="img-conteiner"><img
+                src="./img-escolha-2/racao-gato-6.svg" alt="ração marca x">
               <span class="lista__nome">Marca x</span>
               <p class="lista__txt">Ração sabor X, para gato porte X, gato filhote</p>
               <span class="lista__preco__txt">A partir de</span>
@@ -97,8 +104,9 @@
           </li>
         </ul>
       </div>
-    </main>
-    <script src="../pages/js/escolha.js"></script>
-  </body>
+    </div>
+  </main>
+  <script src="./js/escolha.js"></script>-
+</body>
 
 </html>
