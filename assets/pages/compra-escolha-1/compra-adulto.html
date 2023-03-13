@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/compra-style.css">
   <link rel="stylesheet" href="../../css/reset.css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto&display=swap" rel="stylesheet">
@@ -71,30 +70,66 @@
         </p>
       </div>
     </section>
-    <div>
-
-    </div>
     <section class="carrinho-conteiner">
       <div>
-        <button class="btn-preco">
+        <button class="btn-preco" id="add-btn">
           <span class="material-symbols-outlined">
-            arrow_back_ios
+            add
           </span>
         </button>
-        <button class="btn-preco">
+        <button class="btn-preco" id="remove-btn">
           <span class="material-symbols-outlined">
-            arrow_forward_ios
+            remove
           </span>
         </button>
       </div>
       <span class="carrinho-preco-txt">Preço (100g)</span>
-      <span class="carrinho-preco">R$ 3,90</span>
+      <span class="carrinho-preco" id="preco">R$ 3,90</span>
       <span class="carrinho-txt">á vista</span>
       <button class="carrinho-botao">Adicionar ao carrinho</button>
-    </section>
+    </section>    
   </main>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="../js/swiper.js"></script>
+  <script>
+
+// Pega os elementos da tela
+const addBtn = document.getElementById('add-btn');
+const removeBtn = document.getElementById('remove-btn');
+const precoElement = document.getElementById('preco');
+
+// Define as variáveis de peso e preço
+let peso = 100;
+let preco = 3.9;
+
+// Adiciona evento de clique ao botão "add"
+addBtn.addEventListener('click', () => {
+  // Aumenta o peso em 100g
+  peso += 100;
+
+  // Atualiza o preço com base no novo peso
+  preco = (peso / 100) * 3.9;
+
+  // Atualiza o valor exibido na tela
+  precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+
+});
+
+// Adiciona evento de clique ao botão "remove"
+removeBtn.addEventListener('click', () => {
+  // Diminui o peso em 100g, desde que não seja menor que 100g
+  if (peso > 100) {
+    peso -= 100;
+
+    // Atualiza o preço com base no novo peso
+    preco = (peso / 100) * 3.9;
+
+    // Atualiza o valor exibido na tela
+    precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+  }
+});
+
+  </script>
 </body>
 
 </html>

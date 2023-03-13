@@ -110,7 +110,8 @@ header {
     font-size: 1rem;
 }
 
-.carrinho-botao:hover {
+.carrinho-botao:hover,
+.btn-preco:hover {
     cursor: pointer;
 }
 
