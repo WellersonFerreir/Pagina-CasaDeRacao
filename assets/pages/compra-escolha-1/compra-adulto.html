@@ -29,7 +29,7 @@
     <div>
       <div class="escolha-1-nav">
         <a href="../../../index.html">Inicio</a>
-        <a href="../escolha-1.html">> Ração para cachorro</a>
+        <a href="../../pages/escolha-1.html"> > Ração para cachorro</a>
         <span>> Ração Marca X Adulto </span>
       </div>
     </div>
@@ -71,20 +71,21 @@
       </div>
     </section>
     <section class="carrinho-conteiner">
+      <span class="carrinho-preco-txt">Preço (100g)</span>
+      <span class="carrinho-preco" id="preco"></span>
       <div>
         <button class="btn-preco" id="add-btn">
           <span class="material-symbols-outlined">
             add
           </span>
         </button>
+        <span id="peso">100</span>
         <button class="btn-preco" id="remove-btn">
           <span class="material-symbols-outlined">
             remove
           </span>
         </button>
       </div>
-      <span class="carrinho-preco-txt">Preço (100g)</span>
-      <span class="carrinho-preco" id="preco">R$ 3,90</span>
       <span class="carrinho-txt">á vista</span>
       <button class="carrinho-botao">Adicionar ao carrinho</button>
     </section>    
@@ -129,6 +130,9 @@ removeBtn.addEventListener('click', () => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+});
   </script>
 </body>
 
