@@ -81,23 +81,25 @@ header {
     position: relative;
 }
 
-
-.carrinho-preco-txt {
-    color: var(--preto);
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
-
 .carrinho-preco {
-    font-size: 3rem;
-    margin-top: 3rem;
+    font-size: 2rem;
     color: var(--preto);
+    font-weight: 700;
 }
 
-.carrinho-txt {
-    font-size: 1.4rem;
-    color: var(--cinza);
-    margin-bottom: 3rem;
+.valorTotal{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--cinza);
+    border-radius: 15px;
+    margin-left: 8rem;
+    padding: 0 1.3rem;
+}
+
+#icone-dinheiro{
+    margin-right: 2rem;
+    font-size: 3rem;
+    color: var(--verde);
 }
 
 .carrinho-botao {
@@ -110,6 +112,61 @@ header {
     margin-bottom: 1rem;
     font-size: 1rem;
 }
+
+.peso-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 5rem;
+    border: 1px solid var(--cinza);
+    border-radius: 15px;
+}
+
+.peso-granel{
+    text-transform: uppercase;
+    margin-right: 5rem;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  option {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #f2f2f2;
+  }
+  
+  select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ddd;
+  }
+  
+
+.peso-conteiner button{
+    color: var(--azul);
+    background-color: transparent;
+    border: none;
+
+}
+
+#peso-acumulado{
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 1px solid var(--cinza);
+    border-radius: 5px;
+}
+
 
 .carrinho-botao:hover,
 .btn-preco:hover {

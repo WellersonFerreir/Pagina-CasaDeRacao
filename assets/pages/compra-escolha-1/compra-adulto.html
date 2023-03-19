@@ -71,22 +71,36 @@
       </div>
     </section>
     <section class="carrinho-conteiner">
-      <span class="carrinho-preco-txt">Preço (100g)</span>
-      <span class="carrinho-preco" id="preco"></span>
-      <div>
+      <span class="carrinho-txt">Valor total</span>
+      <div class="valorTotal">
+        <span class="material-symbols-outlined" id="icone-dinheiro">payments</span>
+        <span class="carrinho-preco" id="preco"></span>
+      </div>
+      <div class="peso-conteiner">
+        <span class="peso-granel">Peso a granel</span>
         <button class="btn-preco" id="add-btn">
           <span class="material-symbols-outlined">
             add
           </span>
         </button>
-        <span id="peso">100</span>
+        <span id="peso-acumulado"></span>
         <button class="btn-preco" id="remove-btn">
           <span class="material-symbols-outlined">
             remove
           </span>
         </button>
       </div>
-      <span class="carrinho-txt">á vista</span>
+
+      <div class="peso-conteiner">
+        <span class="peso-granel">pacote</span>
+        <select id="saco-racao" name="saco-racao">
+          <option value="10kg">10kg</option>
+          <option value="20kg">20kg</option>
+          <option value="30kg">30kg</option>
+        </select>
+      </div>
+
+
       <button class="carrinho-botao">Adicionar ao carrinho</button>
     </section>    
   </main>
@@ -98,10 +112,15 @@
 const addBtn = document.getElementById('add-btn');
 const removeBtn = document.getElementById('remove-btn');
 const precoElement = document.getElementById('preco');
+const pesoAcumuladoElement = document.getElementById('peso-acumulado');
 
 // Define as variáveis de peso e preço
 let peso = 100;
 let preco = 3.9;
+
+// Atualiza o valor exibido na tela
+precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+pesoAcumuladoElement.innerText = ` ${peso}gr`;
 
 // Adiciona evento de clique ao botão "add"
 addBtn.addEventListener('click', () => {
@@ -113,7 +132,7 @@ addBtn.addEventListener('click', () => {
 
   // Atualiza o valor exibido na tela
   precoElement.innerText = `R$ ${preco.toFixed(2)}`;
-
+  pesoAcumuladoElement.innerText = ` ${peso}gr`;
 });
 
 // Adiciona evento de clique ao botão "remove"
@@ -127,12 +146,10 @@ removeBtn.addEventListener('click', () => {
 
     // Atualiza o valor exibido na tela
     precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+    pesoAcumuladoElement.innerText = `${peso}gr`;
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  precoElement.innerText = `R$ ${preco.toFixed(2)}`;
-});
   </script>
 </body>
 
