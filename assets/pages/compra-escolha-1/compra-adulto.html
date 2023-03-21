@@ -115,8 +115,8 @@ const precoElement = document.getElementById('preco');
 const pesoAcumuladoElement = document.getElementById('peso-acumulado');
 
 // Define as variáveis de peso e preço
-let peso = 100;
-let preco = 3.9;
+let peso = 0;
+let preco = 0;
 
 // Atualiza o valor exibido na tela
 precoElement.innerText = `R$ ${preco.toFixed(2)}`;
@@ -137,8 +137,8 @@ addBtn.addEventListener('click', () => {
 
 // Adiciona evento de clique ao botão "remove"
 removeBtn.addEventListener('click', () => {
-  // Diminui o peso em 100g, desde que não seja menor que 100g
-  if (peso > 100) {
+  // Diminui o peso em 100g, desde que não seja menor que 0
+  if (peso > 0) {
     peso -= 100;
 
     // Atualiza o preço com base no novo peso
