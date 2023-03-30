@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/compra-style.css">
-  <link rel="stylesheet" href="../../css/loja-style.css">
   <link rel="stylesheet" href="../../css/reset.css">
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto&display=swap" rel="stylesheet">
@@ -18,20 +17,20 @@
 
 
 
-  <title>Ração Marca X Senior</title>
+  <title>Ração Marca X Adulto</title>
 </head>
 
 <body>
 
   <header>
     <div class="cabecalho__logo">
-      <img src="../img-escolha-1/logo-cabecalho.svg" alt="logotipo da loja">
+      <img src="../../img/logo-cabecalho.svg" alt="logotipo da loja">
     </div>
     <div>
       <div class="escolha-1-nav">
         <a href="../../../index.html">Inicio</a>
-        <a href="../escolha-2.html">> Ração para gato</a>
-        <span> > Ração Marca X Senior </span>
+        <a href="../../pages/escolha-2.html"> > Ração para gato</a>
+        <span>> Ração Marca X Adulto </span>
       </div>
     </div>
   </header>
@@ -41,12 +40,12 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="project-img">
-              <img src="../img-escolha-2/racao-gato-3.svg" alt="ração gato">
+              <img src="../img-escolha-2/racao-gato-1.svg" alt="ração gato">
             </div>
           </div>
           <div class="swiper-slide">
             <div class="project-img">
-              <img src="../img-escolha-2/racao-gato-3-verso.svg" alt="ração gato">
+              <img src="../img-escolha-2/racao-gato-1-verso.svg" alt="ração gato">
             </div>
           </div>
         </div>
@@ -58,10 +57,10 @@
       </div>
       <div class="info-conteiner">
         <h1 class="nome-item">Marca X</h1>
-        <h2 class="desc-item">Ração sabor X, para gato <br>porte X, Senior</h2>
+        <h2 class="desc-item">Ração sabor X, para gato <br>porte X, adulto</h2>
         <span class="info">Informações</span>
         <p class="info-txt">
-          Ração indicada para cães senior;<br>  
+          Indicada para cães adultos;<br>
           Blend de proteínas;<br>
           Músculos mais fortes;<br>
           Redução do odor das fezes;<br>
@@ -71,18 +70,130 @@
         </p>
       </div>
     </section>
-    <div>
-
-    </div>
     <section class="carrinho-conteiner">
-      <span class="carrinho-preco-txt">Preço (100g)</span>
-      <span class="carrinho-preco">R$ 4,50</span>
-      <span class="carrinho-txt">á vista</span>
+      <span class="carrinho-txt">Valor total</span>
+      <div class="valorTotal">
+        <span class="material-symbols-outlined" id="icone-dinheiro">payments</span>
+        <span class="carrinho-preco" id="preco"></span>
+      </div>
+      <div class="peso-conteiner">
+        <span class="peso-granel">Peso a granel</span>
+        <button class="btn-preco" id="add-btn">
+          <span class="material-symbols-outlined">
+            add
+          </span>
+        </button>
+        <span id="peso-acumulado"></span>
+        <button class="btn-preco" id="remove-btn">
+          <span class="material-symbols-outlined">
+            remove
+          </span>
+        </button>
+      </div>
+
+      <div class="peso-conteiner">
+        <span class="peso-granel">peso por kilo</span>
+        <select id="saco-racao" name="saco-racao">
+          <option value="saco">SACO</option>
+          <option value="10kg">10kg</option>
+          <option value="20kg">20kg</option>
+          <option value="30kg">30kg</option>
+        </select>
+      </div>
+
+
       <button class="carrinho-botao">Adicionar ao carrinho</button>
-    </section>
+    </section>    
   </main>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="../js/swiper.js"></script>
+  <script>
+
+// Pega os elementos da tela
+const addBtn = document.getElementById('add-btn');
+const removeBtn = document.getElementById('remove-btn');
+const sacoRacaoSelect = document.getElementById('saco-racao');
+const precoElement = document.getElementById('preco');
+const pesoAcumuladoElement = document.getElementById('peso-acumulado');
+
+// Define as variáveis de peso e preço
+let peso = 0;
+let preco = 0;
+const precoPorKilo = 19.9;
+
+// Atualiza o valor exibido na tela
+precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+pesoAcumuladoElement.innerText = `${peso}gr`;
+
+// Adiciona evento de clique ao botão "add"
+addBtn.addEventListener('click', () => {
+  // Aumenta o peso em 100g
+  peso += 100;
+
+  // Atualiza o preço com base no novo peso
+  preco = (peso / 1000) * precoPorKilo;
+
+  // Adiciona o valor do saco de ração, caso selecionado
+  if (sacoRacaoSelect.value !== 'saco') {
+    const pesoSaco = parseInt(sacoRacaoSelect.value);
+    preco += pesoSaco * precoPorKilo;
+  }
+
+  // Atualiza o valor exibido na tela
+  precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+  pesoAcumuladoElement.innerText = `${peso}gr`;
+});
+
+// Adiciona evento de clique ao botão "remove"
+removeBtn.addEventListener('click', () => {
+  // Diminui o peso em 100g, desde que não seja menor que 0
+  if (peso > 0) {
+    peso -= 100;
+
+    // Atualiza o preço com base no novo peso
+    preco = (peso / 1000) * precoPorKilo;
+
+    // Remove o valor do saco de ração, caso selecionado
+    if (sacoRacaoSelect.value !== 'saco') {
+      const pesoSaco = parseInt(sacoRacaoSelect.value);
+      preco -= pesoSaco * precoPorKilo;
+    }
+
+    // Atualiza o valor exibido na tela
+    precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+    pesoAcumuladoElement.innerText = `${peso}gr`;
+  }
+});
+
+// Adiciona evento de mudança à seleção de peso do saco de ração
+sacoRacaoSelect.addEventListener('change', () => {
+  // Atualiza o preço com base no novo peso do saco de ração
+  if (sacoRacaoSelect.value !== 'saco') {
+    const pesoSaco = parseInt(sacoRacaoSelect.value);
+    preco = (peso / 1000) * precoPorKilo + pesoSaco * precoPorKilo;
+  } else {
+    preco = (peso / 1000) * precoPorKilo;
+  }
+
+  // Atualiza o valor exibido na tela
+  precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+
+  function atualizarPreco() {
+  // Verifica se o peso acumulado é menor que zero e, se for, define como zero
+  if (peso < 0) {
+    peso = 0;
+  }
+
+  // Calcula o preço com base no peso acumulado e no preço por quilo do saco de ração selecionado
+  let preco = peso * precoPorKilo[sacoRacaoSelect.value];
+
+  // Atualiza o elemento de preço na tela com o novo valor calculado
+  precoElement.innerText = formatarPreco(preco);
+}
+
+});
+
+  </script>
 </body>
 
 </html>

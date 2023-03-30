@@ -1,55 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/responsivo.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto&display=swap" rel="stylesheet">
-  <title>Loja de Ração</title>
+  <link rel="stylesheet" href="./assets/css/style-main.css">
+  <title>Document</title>
 </head>
 
 <body>
   <header>
-    <div class="cabecalho__logo">
-      <img src="../../assets/img/logo-cabecalho.svg" alt="logotipo da loja">
+    <div class="cabecalho">
+      <img src="./assets/img/logo-cabecalho.svg" alt="Logotipo" class="cabecalho__logo">
     </div>
-    <div class="divSearch">
-      <input type="text" id="searchInput" placeholder="Pesquisar...">
-    </div>
-    <div class="auth-buttons">
-      <span class="material-symbols-outlined" id="material-symbols-outlined">person</span>
-      <a href="#" class="btn-enter btn-grid">Entrar</a>
-      <span class=" btn-register btn-grid">Não tem cadastro?<br><a href="#">Cadastrar-se</a>
-        </a></span>
+    <div class="titulo">
+      <h1 class="cabecalho__titulo">Escolha o grupo do seu PET</h1>
     </div>
   </header>
-  <main>
-    <div class="escolha">
-      <section class="escolha-1">
-        <a href="./assets/pages/escolha-1.html">
-          <img src="./assets/img/cachorro.svg" alt="cachorro de óculos">
-          <div class="sobreposicao-botao-1">
-            <p class="sobreposicao-txt">Ração para</p>
-            <h2 class="sobreposicao-escolha">Cachorro</h2>
-          </div>
-        </a>
-      </section>
-      <section class="escolha-2">
-        <a href="./assets/pages/escolha-2.html">
-          <img src="./assets/img/gato.svg" alt="cachorro de óculos">
-          <div class="sobreposicao-botao-2">
-            <p class="sobreposicao-txt">Ração para</p>
-            <h2 class="sobreposicao-escolha">Gato</h2>
-          </div>
-        </a>
-      </section>
-    </div>
+  <main class="escolha">
+    <section class="escolha-1">
+      <a href="./assets/pages/escolha-1.html">
+        <img src="./assets/img/cachorro.svg" alt="imagem cachorro">
+      </a>
+    </section>
+    <section class="escolha-2">
+      <a href="./assets/pages/escolha-2.html">
+        <img src="./assets/img/gato.svg" alt="imagem gato">
+      </a>
+    </section>
   </main>
 </body>
 

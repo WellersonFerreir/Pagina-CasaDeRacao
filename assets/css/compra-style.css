@@ -71,7 +71,6 @@ header {
 .carrinho-conteiner {
     z-index: 6;
     margin: -28rem 0 0 67rem;
-    border: 1px solid var(--cinza);
     padding-right: 0;
     border-radius: 15px;
     display: flex;
@@ -109,7 +108,7 @@ header {
     border-radius: 5px;
     width: 50%;
     height: 40px;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
     font-size: 1rem;
 }
 

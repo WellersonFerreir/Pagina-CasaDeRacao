@@ -92,8 +92,9 @@
       </div>
 
       <div class="peso-conteiner">
-        <span class="peso-granel">pacote</span>
+        <span class="peso-granel">peso por kilo</span>
         <select id="saco-racao" name="saco-racao">
+          <option value="saco">SACO</option>
           <option value="10kg">10kg</option>
           <option value="20kg">20kg</option>
           <option value="30kg">30kg</option>
@@ -111,16 +112,18 @@
 // Pega os elementos da tela
 const addBtn = document.getElementById('add-btn');
 const removeBtn = document.getElementById('remove-btn');
+const sacoRacaoSelect = document.getElementById('saco-racao');
 const precoElement = document.getElementById('preco');
 const pesoAcumuladoElement = document.getElementById('peso-acumulado');
 
 // Define as variáveis de peso e preço
 let peso = 0;
 let preco = 0;
+const precoPorKilo = 9.9;
 
 // Atualiza o valor exibido na tela
 precoElement.innerText = `R$ ${preco.toFixed(2)}`;
-pesoAcumuladoElement.innerText = ` ${peso}gr`;
+pesoAcumuladoElement.innerText = `${peso}gr`;
 
 // Adiciona evento de clique ao botão "add"
 addBtn.addEventListener('click', () => {
@@ -128,11 +131,17 @@ addBtn.addEventListener('click', () => {
   peso += 100;
 
   // Atualiza o preço com base no novo peso
-  preco = (peso / 100) * 3.9;
+  preco = (peso / 1000) * precoPorKilo;
+
+  // Adiciona o valor do saco de ração, caso selecionado
+  if (sacoRacaoSelect.value !== 'saco') {
+    const pesoSaco = parseInt(sacoRacaoSelect.value);
+    preco += pesoSaco * precoPorKilo;
+  }
 
   // Atualiza o valor exibido na tela
   precoElement.innerText = `R$ ${preco.toFixed(2)}`;
-  pesoAcumuladoElement.innerText = ` ${peso}gr`;
+  pesoAcumuladoElement.innerText = `${peso}gr`;
 });
 
 // Adiciona evento de clique ao botão "remove"
@@ -142,12 +151,46 @@ removeBtn.addEventListener('click', () => {
     peso -= 100;
 
     // Atualiza o preço com base no novo peso
-    preco = (peso / 100) * 3.9;
+    preco = (peso / 1000) * precoPorKilo;
+
+    // Remove o valor do saco de ração, caso selecionado
+    if (sacoRacaoSelect.value !== 'saco') {
+      const pesoSaco = parseInt(sacoRacaoSelect.value);
+      preco -= pesoSaco * precoPorKilo;
+    }
 
     // Atualiza o valor exibido na tela
     precoElement.innerText = `R$ ${preco.toFixed(2)}`;
     pesoAcumuladoElement.innerText = `${peso}gr`;
   }
+});
+
+// Adiciona evento de mudança à seleção de peso do saco de ração
+sacoRacaoSelect.addEventListener('change', () => {
+  // Atualiza o preço com base no novo peso do saco de ração
+  if (sacoRacaoSelect.value !== 'saco') {
+    const pesoSaco = parseInt(sacoRacaoSelect.value);
+    preco = (peso / 1000) * precoPorKilo + pesoSaco * precoPorKilo;
+  } else {
+    preco = (peso / 1000) * precoPorKilo;
+  }
+
+  // Atualiza o valor exibido na tela
+  precoElement.innerText = `R$ ${preco.toFixed(2)}`;
+
+  function atualizarPreco() {
+  // Verifica se o peso acumulado é menor que zero e, se for, define como zero
+  if (peso < 0) {
+    peso = 0;
+  }
+
+  // Calcula o preço com base no peso acumulado e no preço por quilo do saco de ração selecionado
+  let preco = peso * precoPorKilo[sacoRacaoSelect.value];
+
+  // Atualiza o elemento de preço na tela com o novo valor calculado
+  precoElement.innerText = formatarPreco(preco);
+}
+
 });
 
   </script>
