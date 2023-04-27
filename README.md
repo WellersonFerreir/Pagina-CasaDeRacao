@@ -20,6 +20,6 @@ cada uma com um link que direciona o usuário para uma segunda página com mais 
 <img src="./assets/readme/ezgif.com-optimize.gif" alt="gif aprensentação">
 <p>DEPOIS</p>
 <img src="./assets/readme/hitpaw-1680200222930.gif" alt="gif aprensentação">
-
+----------------------------------------------------------------------------------------------------------------
 <p>Obs: Logo tera a versão responsiva da pagina de compra.</p>
 
